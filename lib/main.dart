@@ -3,20 +3,18 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-  runApp(MyApp());
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home:Anasayfa(),
+      home: Anasayfa(),
     );
   }
 }
@@ -28,38 +26,38 @@ class Anasayfa extends StatefulWidget {
 
 class _AnasayfaState extends State<Anasayfa> {
   String a;
-  Future<void> veriOku() async{
+  Future<void> veriOku() async {
     //tum dokumankar
-    await FirebaseFirestore.instance.collection("notlar").get().then((snapchpt){
+    await FirebaseFirestore.instance
+        .collection("notlar")
+        .get()
+        .then((snapchpt) {
       snapchpt.docs.forEach((doc) {
-       debugPrint(" ${doc.data()}");
-     });
+        debugPrint(" ${doc.data()}");
+      });
     });
-
-
-
-
   }
 
   @override
   void initState() {
     super.initState();
-   // veriEkle();
-
+    // veriEkle();
     Firebase.initializeApp().whenComplete(() {
       print("completed");
       setState(() {});
     });
     veriOku();
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("firebase superknowa"),
       ),
-      body: Center(child: Text("merhaba"),),
+      body: Center(
+        child: Text("merhaba"),
+      ),
     );
   }
 }
