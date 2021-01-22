@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "507357990825",
+    "project_id": "flutterworks-dfbf0",
+    "storage_bucket": "flutterworks-dfbf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507357990825:android:4a25d140c8219067b1beb8",
+        "android_client_info": {
+          "package_name": "com.example.firebase_works_superknowa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507357990825-djfmp0vn7srp9ojf2gm4sic1ro9ls2mc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC001jpubS5fizPIs8mmST1ClqbSeD2U_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507357990825-djfmp0vn7srp9ojf2gm4sic1ro9ls2mc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
